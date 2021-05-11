@@ -1,0 +1,206 @@
+.App {
+  text-align: center;
+}
+
+.header{
+    top: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    background-color: #7745fd;
+    color: #fff;
+    box-shadow: 2px 3px 5px #a29f9f;
+
+  h3{
+    margin: 2% auto;
+    font-weight: 400;
+  }
+
+  .bars{
+    margin: auto 4.5rem;
+  }
+}
+
+.details{
+
+  h2{
+    margin: 8px 26px;
+    float: left;
+    font-size: .8rem;
+    color: #b7b7b7;
+    font-weight: 500;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  background-color: #fff;
+  margin: 1% 7%;
+  overflow: auto;
+}
+
+.user-details{
+  margin: 2%;
+  display: flex;
+
+  img{
+    width: 7%;
+    border-radius: 50%;
+  }
+
+  h1{
+    margin: 0 23px;
+  }
+}
+
+.message{
+  margin: 1rem 3.5rem;
+
+  h3{
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
+.actions{
+
+  button{
+    display: none;
+    z-index: -1;
+  }
+}
+
+.content{
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width:500px) {
+
+  .container{
+    transition-duration: 2s;
+    position: relative;
+    box-shadow: 1px 2px #cdcdcd;
+    margin: 2% 7%;
+    z-index: 2;
+  }
+
+  .content{
+    margin-top: 61px;
+  }
+
+  .main-content.touchMove{
+    transition-duration: 2s;
+    transform: translate(38px, 0);
+    -webkit-transform: translate(38px, 0); /** Safari & Chrome **/
+    -o-transform: translate(38px, 0); /** Opera **/
+    -moz-transform: translate(38px, 0); /** Firefox **/
+
+    .message{
+      width: fit-content;
+    }
+  }
+
+  .container{
+    height: auto;
+
+    button{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    left: 1rem;
+    width: 12%;
+    height: 200px;
+    margin: 1rem 1rem 1rem 0;
+    background: #e44545;
+    border: none;
+    border-radius: 6px;
+    }
+
+    .bars{
+      color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      vertical-align:top;
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg); /** Safari & Chrome **/
+      -o-transform: rotate(270deg); /** Opera **/
+      -moz-transform: rotate(270deg);
+    }
+
+    .trash{
+      bottom: -1.5rem;
+      position: relative;
+      color: white;
+    }
+
+    .deleteAction{
+      opacity: 0;
+      transition: 0.3s;
+      display: none;
+      position: absolute;
+      z-index: 3;
+    }
+
+    .deleteAction.visible{
+      opacity: 1;
+      transition: 0.3s;
+      display: block;
+    }
+  }
+
+  .user-details{
+    margin: 8% 8% 3% 8%;
+
+    img{
+      width: 12%;
+    }
+
+    h1{
+      font-size: 1rem;
+      margin: 0 15px;
+    }
+
+    .details{
+
+      h2{
+        margin: 2px 15px;
+      }
+    }
+  }
+
+  .message{
+    h3{
+    font-size: .8rem;
+    word-wrap: break-word;
+    }
+  }
+
+  .header{
+  
+    h3{
+      padding-right: 9rem;
+      font-weight: 400;
+    }
+  
+    .bars{
+      margin: auto 2.5rem;
+    }
+  }
+
+}
