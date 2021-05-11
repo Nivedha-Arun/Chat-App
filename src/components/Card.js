@@ -13,14 +13,14 @@ var differenceInDate = currentDate.getFullYear() - postDate.getFullYear();
 
 const touchMove = (event) => {
     var element = document.getElementsByClassName("main-content");
-    var id= ((props.data.id-1) % 10);
+    var id= ((props.data.id-1));
     element[id].classList.add("touchMove");
 };
 
 const touchStart = (event) => {
     var element = document.getElementsByClassName("container");
     var deleteAction = document.getElementsByClassName("deleteAction");
-    var id= ((props.data.id-1) % 10);
+    var id= ((props.data.id-1));
     deleteAction[id].classList.add("visible");
     deleteAction[id].style.height = element[id].offsetHeight - 25 + "px";
     touchMove();
@@ -29,7 +29,7 @@ const touchStart = (event) => {
 const buttonClick = () => {
     var element = document.getElementsByClassName("main-content");
     var deleteAction = document.getElementsByClassName("deleteAction");
-    var id= ((props.data.id-1) % 10);
+    var id= ((props.data.id-1));
     element[id].classList.remove("touchMove");
     deleteAction[id].classList.remove("visible");
 }

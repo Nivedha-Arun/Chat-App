@@ -30,8 +30,8 @@ function App() {
 
 const scrollToEnd = () => {
   setPageToken(pageId = "?pageToken="+pageToken)
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  //document.body.scrollTop = 0;
+  //document.documentElement.scrollTop = 0;
 }
 
 window.onscroll = function() {
